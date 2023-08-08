@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습퀴즈</title>
+    <style>
+        .red{
+            color:red;
+        }
+        .aquamarine{
+            color:aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="question">대한민국의 수도는</div>
+    <input type= "text"class="userAnswer">
+    <button class="checkBtn"> 정답확인</button>
+    <p class="message"></p>
+</body>
+<script>
+    //1.이벤트를 발생시킬 버튼, 메세지를 출력할 태드,
+    // 유저가 입력한 정답
+
+    var checkBtn = document.querySelector('.checkBtn');
+    var userAnswer = document.querySelector('.userAnswer');
+    var message = document.querySelector('.message');
+
+    //2.정답 변수를 만듬
+    var corrextAnser = '서울';
+
+    var checkAnswer = function(){
+        // inputUserAnswer에 유저가 입력한 값을 받아온다
+        var inputUserAnswer = userAnswer.value;
+        if(inputUserAnswer === corrextAnser){
+        message.textContent = '정답입니다';
+        message.classList.remove('red');
+        message.classList.add('aquamarine');
+        
+    }else{
+        message.textContent = '오답입니다';
+        message.classList.remove('aquamarine');
+        message.classList.add('red');
+
+    }
+}
+    checkBtn.addEventListener("click", checkAnswer)
+
+</script>
+</html>

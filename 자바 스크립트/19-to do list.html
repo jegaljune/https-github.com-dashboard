@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do list</title>
+</head>
+<style>
+    .mydiv{
+        width: 500px;
+        height :500px;
+        border : 1px solid #333
+    }
+</style>
+<body>
+    <div class = "mydiv">
+        <section>
+            <header>
+                <h1> to do list</h1>
+                <div class="question"> 오늘 할 일</div>
+                <div class="inputlist"></div>
+
+                <input type="text" placeholder="" class="todolist">
+
+                <button class="checkBtn">입력</button>
+                <ul class="listuI"></ul>
+            </div>
+                
+            </header>
+        </section>
+        <section>
+            <ul>
+
+            </ul>
+        </section>
+    </div>
+    
+</body>
+<script>
+    
+    var checkBtn = document.querySelector('.checkBtn');
+    var listuI = document.querySelector('.listuI');
+    var todolist = document.querySelector('.todolist');
+    var todoarray = []
+    var listcheck = function(){
+        var list = todolist.value;
+        var inputlist = document.querySelector(".inputlist");
+        todoarray.push(list);
+        console.log(todoarray);
+        var listext = '';
+        for(var i=0; i< todoarray.Iength;i++){
+            lisText += "<li>" + todoarray[i] +"</li>"
+        }
+        console.log(listuI)
+        listuI.innerHTML = listext;
+        todolist.value="";
+        todolist.focus();
+
+    }
+    checkBtn.addEventListener("click" , listcheck)
+
+
+</script>
+</html>

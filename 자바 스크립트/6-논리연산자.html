@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // && : 조건이 여러개일 때 모든 조건이 맞아야 true, 그렇지 않으면 false
+
+        //컴활에서 엑셀점수가 70점 이상이고, 엑세스점수가 70점이면 합격,
+        //그렇지 않으면 불합격
+        
+        var excel = prompt('num01 == num02 :');
+        var access = prompt('num01 == num02 :');
+
+        if(excel >=70 && access >=70){
+            alert('합격입니다');
+        }else{
+            alert('불합격 입니다');
+        }
+
+        // || : 조건이 여러개인 경우 하나라도 조건이 맞으면 true, 모두 틀리면 false
+        //주민등록번호 뒤의 첫번째 자리만 입력받아서 1or3이면 남자, 그렇지 않으면 여자
+
+        var fisrtNumber = prompt('주민등록번호 뒤의 첫자리만 입력, 1-4사이의 숫자')
+
+        if(firstNumber == 1 || fisrtNumber == 3){
+            alert('남자');
+        }else{
+            alert('여자');
+        }
+        
+
+        
+
+    </script>
+    
+</body>
+</html>

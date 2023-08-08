@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중첩for문</title>
+
+</head>
+<body>
+</body>
+<script>
+    // 1학년 1반부터 3학년 10반까지 출력
+    var output = '';
+    // for(조기식 ; 조건식 ; 증감식)
+    for(var grade = 1 ; grade <= 3 ; grade++){
+        output += '---'+grade+'학년 출력--- <br/>'
+        for(var className = 1; className<=10 ; className++){
+            output += grade + '학년' + className + '반 <br/>';
+        }
+    };
+
+    document.write(output);
+
+    
+
+
+</script>
+
+</html>

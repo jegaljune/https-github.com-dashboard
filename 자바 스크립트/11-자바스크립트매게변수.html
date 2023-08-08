@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매게변수와 return</title>
+    <script>
+
+        var num =prompt('점수를 입력해주세요');
+        //제곱을 구하는 함수
+        var squer01 = function(){
+          console  (5*5)
+        }
+
+        //prompt를 통해 받은 숫자의 제곱을 출력하는 함수
+        var squer02 = function(num){
+            console.log(num*num);
+        }
+        //prompt를 통해 받은 숫자의 제곱을 반환하는
+        var squer03 = function(num){
+            return num*num;
+        }
+        //버튼 클릭 이벤트
+        var buttonEvent = function(){
+            console.log(squer03(num));
+        }
+
+        //return이 없는 함수는 코드를 실행만 시킨다
+        //return이 존재하는 함수는 코드를 순서대로 실행 후 return값을 반환한다.
+
+        //;매게변수(파라미터)는 함수를 선언하는 곳과 호출하는 곳의 매게체 가 되는 변수이다.
+
+        
+    </script>
+</head>
+<body>
+    <button onclick="squer01()">5의 제곱출력</button>
+    <button onclick="squer02(num)">파라미터로 숫자 받은 숫자의 제곱 출력</button>
+    <button onclick="squer03()">값 return하기</button>
+    
+</body>
+</html>

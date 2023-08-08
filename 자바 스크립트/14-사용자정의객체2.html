@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 정의 객체</title>
+</head>
+<script>
+    //car라는 객체 생성
+    //속성 : 값이 함수가 아닌 것
+    //매서드 : 값이 함수인 것
+
+    var gas;
+
+    var car ={
+        name :'재네시스',
+        model :'G80',
+        weight:'1.2t',
+        color:'white',
+        gas:gas,
+        isRunning: true,
+        drive:function(){
+            gas = prompt('기름을 넣어주세요');
+            this.gas = gas;
+        },
+        gascheck: function(){
+            alert('자동차 오일 상태 : ' + this.gas)
+        }
+    }
+</script>
+<body>
+    <button> onclick="car.gasup()">기름 넣기</button>
+    <button> onclick="car.gascheck()">기름 확인</button>
+    <button> onclick="car.drive()">출발</button>
+</body>
+</html>

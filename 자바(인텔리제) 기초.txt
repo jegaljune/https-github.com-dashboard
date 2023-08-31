@@ -1,0 +1,214 @@
+ackage chap_01;
+
+public class _02_DataTypes {
+    public static void main(String[] args) {
+        System.out.println("Hello world");
+        System.out.println("안녕하세요?");
+        System.out.println(12);
+        System.out.println(-34);
+        System.out.println(3.14);
+        System.out.println(true);
+        System.out.println(false);
+
+
+        System.out.println(123 + 345);
+        
+    }
+}
+
+
+
+public class _03_Variables {
+    public static void main(String[] args) {
+        String name = "제갈 개발자";
+        int hour = 15;
+
+
+
+        System.out.println( name + "님, 배송이 시작됩니다. "+  hour  +"시에 방문 예정입니다");
+        System.out.println( name + "님, 배송이 완료되었습니다.");
+
+
+        double score = 90.5;
+        char grade = 'A';
+        name = "제갈준";
+
+
+        System.out.println(name + "님의 평균 점수는" + score + "점 입니다");
+        System.out.println("학점은" + grade + "입니다.");
+        boolean pass = false;
+        System.out.println("이번시험에 합격 했을까요?" + pass);
+
+        double d = 3.14123456789;
+        float f = 3.14123456789f;
+        System.out.println(d);
+        System.out.println(f);
+
+        long l = 1000000000000l;
+        l = 1_0000_0000_0000l;
+        System.out.println(l);
+
+        // int , long, float, double, char, string, boolean 단어 중요
+    }
+}
+
+
+
+package chap_01;
+
+public class _04_comment {
+    public static void main(String[] args) {
+        System.out.println("(10분 전) 잠시 후 결혼식 시작 예정이오니 착석 부탁드립니다.");
+        //System.out.println("(5분 전) 잠시 후 결혼식 시작 예정이오니 착석 부탁드립니다.");
+        System.out.println("지금부터 결혼식을 시작하겠습니다.");
+
+        int size = 120;
+        size = size + 10; //어린이는 발이 빨리 자라기  떄문에 사이즈 10만큼 더 큰 신발을 구매
+        System.out.println("신발 사이즈 "  + size + "으로 보여주세요");
+
+        // 한 줄 주석 단축기 : ctrl + /
+        // 여러 줄 주석 단축키 : ctrl + Shift + /
+        int a = 10;
+        int b = 20;
+        System.out.println(a + b);
+
+
+    }
+}
+
+
+
+package chap_01;
+
+public class _05_VariableNaming {
+    public static void main(String[] args) {
+        // 변수 이름 짓는 법
+        // 1. 저장할 값에 어울리는 이름
+        // 2. 밑줄(_), 문자(abc), 숫자(1234) 사용 가능 (공백 사용 불가)
+        // 3. 밑줄 또는 문자로 시작 가능
+        // 4. 한 단어 또는 2개 이상 단어의 연속
+        // 5. 소문자로 시작, 각 단어의 시작 글자는 대문자 (첫 단어는 제외)
+        // 6. 예약어 사용 불가 (public, static, void, int, double, float, ...)
+
+        // 입국 신고서 (여행)
+        String nationality = "대한민국"; //국적
+        String fistName = "준"; // 이름
+        String lastName = "제갈"; // 성
+        String dateOfBirth = "2004 - 03 - 21";  //생년원일
+        String residentialAddress = "무슨 호텔"; // 체류지
+        String purposeOfVist = "관광"; // 입국목적
+        String flightNo = "KE657"; // 항공 편명
+        String _flightNo = "KE657"; // 밑줄 시작
+        String flight_no_2 = "KE657"; // 밑줄과 숫자 포함
+       // String -filghtNo = "KE657";
+
+        int accompany = 2; // 동반 가족 수
+        int lengthOfStay = 5; //체류 기간
+
+        String item1 = "시계";
+        String item2 = "가방";
+        //String 3item = "전자제품";
+
+
+        //프로그램의 흐름을 위해 사용되는 경우 등 (크게 이름이 중요하지 않을떄)
+        int i = 0;
+        String s = "";
+        String str = "";
+
+        //절대 변하지 않는 상수는 대문자로
+       final String CODE = "KR";
+
+    }
+}
+
+
+
+package chap_01;
+
+public class _06_Constants {
+    public static void main(String[] args) {
+        final String KR_COUNTRY_CODE = "+82"; //국가 번호 (빨리)
+        // KR_COUNTRY_CODE = "+8282";
+        System.out.println(KR_COUNTRY_CODE);
+
+        final double PI = 3.141592; // 원주율
+        final String DATE_OF_BRITH = "2004-03-21"; //생년월일
+    }
+}
+
+
+package chap_01;
+
+public class _07_TypeCasting {
+    public static void main(String[] args) {
+        // 형변환 TypeCasting
+        // 정수형에서 실수형으로
+        // 실수형에서 정수형으로
+
+        //int to float, double
+
+        int score = 93;
+        System.out.println(score); // 93
+        System.out.println((float)score); // 93.0
+        System.out.println((double)score); // 93.0
+
+        //float, double, to int
+        float score_f = 93.3F;
+        double score_d = 98.8;
+        System.out.println((int) score_f); // 93
+        System.out.println((int) score_d); // 98
+
+        // 정수 + 실수 연산
+        score = 93 + (int)98.8; // 93 + 98
+        System.out.println(score); // 191
+
+        score_d = (double) 93 + 98.8; // 93 + 98.8
+        System.out.println(score_d); // 191.8
+
+        // 변수에 형변환된 데이터 집어넣기
+        double convertedScoreDouble = score; // 191 -> 191.0
+        // int -> long -> float -> double (자동 형변환)
+
+        int convertedScoreInt = (int)score_d; // 191.8 -> 191
+        // double -> float -> long -> int (수동 형변환)
+
+        //숫자를 문자열로
+        String s1 = String.valueOf(93);
+        s1 = Integer.toString(93);
+        System.out.println(s1); // 93
+
+        String s2 = String.valueOf(98.8);
+        s2 = Double.toString(98.8);
+        System.out.println(s2); // 98.8
+
+        // 문자열을 숫자로
+        int i = Integer.parseInt("93");
+        System.out.println(i); // 93
+        double d = Double.parseDouble("98.8");
+        System.out.println(d); //98.8
+
+        int error = Integer.parseInt("자바");  // 안됨
+    }
+}
+
+퀴즈
+
+package chap_01;
+
+public class _Quiz_01 {
+    public static void main(String[] args) {
+
+
+        String busno = "상암 08";
+
+        int minute = 3;
+
+        double distance = 1.2;
+
+
+        System.out.println(busno + "번 버스");
+        System.out.println("약"  + minute + "분 후 도착");
+        System.out.println("남은 거리" +  distance + "km");
+
+    }
+}
